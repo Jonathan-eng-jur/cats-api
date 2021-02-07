@@ -1,0 +1,35 @@
+<div class="mt-3 mb-5">
+
+    <!-- INICIO SELECT -->
+    <div>
+        <label for="">raças:</label>
+        <select class="form-select mt-2" aria-label="Seleção das origens" (change)="onChange($event.target.value)">
+            <option selected>Selecione uma raça</option>
+            <option [value]="i" *ngFor="let i of listaRacas">{{ i }}</option>
+        </select>
+    </div>
+    <!-- TERMINO SELECT -->
+    
+
+    <!-- INICIO CONTEUDO GATO -->
+    <div *ngIf="exibeGato" class="mt-5">
+        <div class="mb-1">
+            <h3> {{ gatoSelecionado.name }} </h3>
+        </div>
+        <div class="col-12 row">
+            <div class="col-4">
+                <img src="{{ gatoSelecionado.image.url }}" class="card-img-top" alt="{{ gatoSelecionado.name }}">            
+            </div>
+            <div class="col-8">
+                <p class="text-justify">
+                    {{ gatoSelecionado.description }}
+                </p>                     
+            </div>            
+        </div>
+        <div class="mt-3">
+            <a href="{{ gatoSelecionado.wikipedia_url }}" target="_blank" class="btn btn-primary">mais informações</a>
+        </div>
+    </div>
+    <!-- TERMINO CONTEUDO GATO -->
+
+</div>

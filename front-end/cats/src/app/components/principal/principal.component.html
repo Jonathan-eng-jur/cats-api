@@ -1,0 +1,37 @@
+<div class="bg-light container">
+    <div class="mt-3">
+        <h3>cats</h3>
+    </div>
+
+    <!-- INICIO DAS TABS -->
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item" role="presentation">
+            <a class="nav-link active" id="info-gatos-tab" data-bs-toggle="tab" href="#info-gatos" role="tab"
+                aria-controls="info-gatos" aria-selected="true">informações gatos</a>
+        </li>
+        <li class="nav-item" role="presentation">
+            <a class="nav-link" id="info-temperamento-racas-tab" data-bs-toggle="tab" href="#info-temperamento-racas" role="tab"
+                aria-controls="linfo-temperamento-racas" aria-selected="false">informações raças pelo temperamento</a>
+        </li>
+        <li class="nav-item" role="presentation">
+            <a class="nav-link" id="linformacoes-origem-racas" data-bs-toggle="tab" href="#informacoes-origem-racas" role="tab"
+                aria-controls="informacoes-origem-racas" aria-selected="false">informações raças pela origem</a>
+        </li>
+    </ul>
+    <!-- TERMINO DAS TABS -->
+
+    <!-- INICIO CONTEUDO DAS TABS -->
+    <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active" id="info-gatos" role="tabpanel" aria-labelledby="info-gatos-tab">
+            <informacoes-gato></informacoes-gato>
+        </div>
+        <div class="tab-pane fade" id="info-temperamento-racas" role="tabpanel" aria-labelledby="info-temperamento-racas-tab">
+            <informacoes-temperamento-racas></informacoes-temperamento-racas>
+        </div>
+        <div class="tab-pane fade" id="informacoes-origem-racas" role="tabpanel" aria-labelledby="informacoes-origem-racas-tab">
+            <informacoes-origem-racas></informacoes-origem-racas>
+        </div>
+    </div>
+    <!-- TERMINO CONTEUDO DAS TABS -->
+
+</div>

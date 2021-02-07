@@ -1,0 +1,40 @@
+<div class="mt-3 mb-5">
+
+    <!-- INICIO SELECT -->
+    <div>
+        <label for="">origens:</label>
+        <select class="form-select mt-2" aria-label="Seleção das origens" (change)="onChange($event.target.value)">
+            <option selected>Selecione uma origem</option>
+            <option [value]="i" *ngFor="let i of listaOrigens">{{ i }}</option>
+        </select>
+    </div>
+    <!-- TERMINO SELECT -->
+        
+    <!-- INICIO TABELA -->
+    <div *ngIf="exibeLista" class="mt-5">
+        <table class="table">
+            <thead class="table-dark">
+                <tr>
+                    <td class="col-6">
+                        Origem
+                    </td>
+                    <td class="col-6">
+                      Raça
+                  </td>
+                </tr>          
+            </thead>
+            <tbody>
+                <tr *ngFor="let i of listaRacas">
+                    <td class="col-6">
+                        {{ origemSelecionada }}
+                    </td>
+                    <td class="col-6">
+                        {{ i }}
+                    </td>
+                </tr>            
+            </tbody>
+        </table>    
+    </div>
+    <!-- TERMINO TABELA -->
+
+</div>
