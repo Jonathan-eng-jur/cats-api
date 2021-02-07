@@ -8,6 +8,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
@@ -51,6 +53,28 @@ public class RacaController {
         //RETORNANDO LISTA DE RACAS E STATUS HTTP PARA O CLIENTE
         return new ResponseEntity<>(listaRacas, HttpStatus.OK);
         
+    }
+    
+    
+    @GetMapping("/gato")
+    @ResponseBody
+    public ResponseEntity<Raca>  getRaca(@RequestParam String raca) {
+
+        String urlApi = "https://api.thecatapi.com/v1/breeds?api_key=bfb85c73-fe0e-40ed-976f-1062aeae5f0c";
+        
+        RestTemplate restTemplate = new RestTemplate();
+
+        Raca[] result = restTemplate.getForObject(urlApi, Raca[].class);
+
+        Raca racaSelecionada = new Raca();
+
+        for(Raca item : result){
+            if(item.getName().equals(raca)){
+                racaSelecionada = item;
+            }
+        }
+        
+        return new ResponseEntity<>(racaSelecionada, HttpStatus.OK);
     }
 
 }
