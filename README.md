@@ -58,8 +58,8 @@
 2. Exibir informações de um gato
 <br />Requisito consite em poder exibir as informações de um gato através da raça
 <br />API: http://ec2-100-25-31-214.compute-1.amazonaws.com:8080/racas/gato/?raca=Abyssinian
-<br />Método: POST
-<br />Body: 
+<br />Método: GET
+<br />Retorno: 
 ``` json
 {
     "weight": {
@@ -112,25 +112,98 @@
 ```
 ![Informacoes Gato](https://imagens-cats.s3-sa-east-1.amazonaws.com/2-gato-by-raca.png)
 
-3. Editar contato
-<br />Requisito consite em poder realizar a edição de um contato.
-<br />API: http://localhost:9080/itau/cadastro/{cpf}
-<br />Método: PUT
-<br />Body: 
+3. Listar temperamentos
+<br />Requisito consite em poder listar todos os temperamentos disponíveis
+<br />API: http://ec2-100-25-31-214.compute-1.amazonaws.com:8080/temperamento
+<br />Método: GET
+<br />Retorno: 
 ``` json
-{
-    "company_name": "Ricardo",
-    "company_document_number": "123456999",
-    "phone_number": "11999999999"
-}
+[
+    "Active",
+    "Energetic",
+    "Agile",
+    "Fun-loving",
+    "Relaxed",
+    "Friendly",
+    "Alert",
+    "Demanding",
+    "Dependent",
+    "Patient",
+    "calm",
+    "Highly interactive",
+    "Mischievous",
+    "affectionate",
+    "loyal",    
+]
 ```
-![Dados Edicao Contato](https://imagens-cadastro-contato.s3-sa-east-1.amazonaws.com/5-Editando+Dados+Cadastro.jpeg)
-![Contato Editado](https://imagens-cadastro-contato.s3-sa-east-1.amazonaws.com/6-Cadastro+Editado+com+Sucesso.jpeg)
+![Listar Temperamentos](https://imagens-cats.s3-sa-east-1.amazonaws.com/3-lista-temperamentos.png)
 
-4. Excluir Contato
-<br />Requisito consite em poder excluir um contato.
-<br />API: http://localhost:9080/itau/cadastro/{cpf}
-<br />Método: DELETE
-![Lista para Excluir](https://imagens-cadastro-contato.s3-sa-east-1.amazonaws.com/8-Lista+para+Excluir.JPG)
-![Lista para Excluir](https://imagens-cadastro-contato.s3-sa-east-1.amazonaws.com/9-Contato+Excluido.JPG) 
-  
+4. Listar raças pelo temperamento
+<br />Requisito consite em poder listar todas as raças através do temperamento
+<br />API: http://ec2-100-25-31-214.compute-1.amazonaws.com:8080/temperamento/?temperamento=Active
+<br />Método: GET
+<br />Retorno: 
+``` json
+[
+    "Abyssinian",
+    "Aegean",
+    "American Shorthair",
+    "Birman",
+    "Cornish Rex",
+    "Japanese Bobtail",
+    "Javanese",
+    "Korat",
+    "Norwegian Forest Cat",
+    "Ocicat",
+    "Russian Blue",
+    "Selkirk Rex",
+    "Siamese"
+]
+```
+![Listar Racas Pelo Temperamento](https://imagens-cats.s3-sa-east-1.amazonaws.com/4-racas-by-temperamento.png)
+
+5. Listar origens
+<br />Requisito consite em listar todas as origens
+<br />API: http://ec2-100-25-31-214.compute-1.amazonaws.com:8080/origem
+<br />Método: GET
+<br />Retorno: 
+``` json
+[
+    "Egypt",
+    "Greece",
+    "United States",
+    "United Arab Emirates",
+    "Australia",
+    "France",
+    "United Kingdom",
+    "Burma",
+    "Canada",
+    "Cyprus",
+    "Russia",
+    "China",
+    "Japan",
+    "Thailand",
+    "Isle of Man",
+    "Norway",
+    "Iran (Persia)",
+    "Singapore",
+    "Somalia",
+    "Turkey"
+]
+```
+![Listar Origens](https://imagens-cats.s3-sa-east-1.amazonaws.com/5-lista-origens.png)
+
+6. Listar raça pela origem
+<br />Requisito consite em poder listar todas as raças através da origem
+<br />API: http://ec2-100-25-31-214.compute-1.amazonaws.com:8080/origem/?origem=Egypt
+<br />Método: GET
+<br />Retorno: 
+``` json
+[
+    "Abyssinian",
+    "Chausie",
+    "Egyptian Mau"
+]
+```
+![Listar Origens](https://imagens-cats.s3-sa-east-1.amazonaws.com/6-racas-by-origem.png)
+
