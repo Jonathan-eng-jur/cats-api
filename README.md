@@ -17,8 +17,9 @@
 - Repositório: github.com/Jonathan-eng-jur/cats-api/tree/main/cats-api
 - Infra: Docker ([link](https://hub.docker.com/r/advogatoblackshark17/cadastro))
 - Documentação: ([link](https://app.swaggerhub.com/apis-docs/Jonathan-eng-jur/cats-api/1.0.0))
+- Design Patterns: MVC
 - Procedimentos para rodar local:
-  1. TBD
+  1. TODO
 
 ## Informações Banco de Dados
 - Tecnologoias utilizadas: My SQL
@@ -30,7 +31,7 @@
  
 ## Requisitos da aplicação
 1. Listar Raças
-<br />Requisito consite em poder listar e todas as raças em um input de seleção
+<br />Requisito consite em poder listar todas as raças em um input de seleção.
 <br />API: http://ec2-100-25-31-214.compute-1.amazonaws.com:8080/racas
 <br />Método: GET
 <br />Retorno: 
@@ -56,7 +57,7 @@
 ![Lista de racas](https://imagens-cats.s3-sa-east-1.amazonaws.com/1-lista-raca.png)
 
 2. Exibir informações de um gato
-<br />Requisito consite em poder exibir as informações de um gato através da raça
+<br />Requisito consite em poder exibir as informações de um gato através da raça.
 <br />API: http://ec2-100-25-31-214.compute-1.amazonaws.com:8080/racas/gato/?raca=Abyssinian
 <br />Método: GET
 <br />Retorno: 
@@ -113,7 +114,7 @@
 ![Informacoes Gato](https://imagens-cats.s3-sa-east-1.amazonaws.com/2-gato-by-raca.png)
 
 3. Listar temperamentos
-<br />Requisito consite em poder listar todos os temperamentos disponíveis
+<br />Requisito consite em poder listar todos os temperamentos disponíveis em um input de seleção.
 <br />API: http://ec2-100-25-31-214.compute-1.amazonaws.com:8080/temperamento
 <br />Método: GET
 <br />Retorno: 
@@ -163,7 +164,7 @@
 ![Listar Racas Pelo Temperamento](https://imagens-cats.s3-sa-east-1.amazonaws.com/4-racas-by-temperamento.png)
 
 5. Listar origens
-<br />Requisito consite em listar todas as origens
+<br />Requisito consite em listar todas as origens em um input de seleção.
 <br />API: http://ec2-100-25-31-214.compute-1.amazonaws.com:8080/origem
 <br />Método: GET
 <br />Retorno: 
