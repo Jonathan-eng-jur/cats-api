@@ -13,7 +13,7 @@
   
 ## Informações Backend
 - Tecnologoias utilizadas: Java e Spring Boot
-- Serviços AWS: EC2 ([link](http://ec2-100-25-31-214.compute-1.amazonaws.com:8080)) (obs: Adicionar end point, ex: /racas)
+- Serviços AWS: EC2 ([link](http://ec2-100-25-31-214.compute-1.amazonaws.com:8080/racas)) (obs: Adicionar end point, ex: /racas)
 - Repositório: github.com/Jonathan-eng-jur/cats-api/tree/main/cats-api
 - Infra: Docker ([link](https://hub.docker.com/repository/docker/advogatoblackshark17/catsdeploy-1))
 - Documentação: ([link](https://app.swaggerhub.com/apis-docs/Jonathan-eng-jur/cats-api/1.0.0))
