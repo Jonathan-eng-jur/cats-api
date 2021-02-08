@@ -55,21 +55,61 @@
 ```
 ![Lista de racas](https://imagens-cats.s3-sa-east-1.amazonaws.com/1-lista-raca.png)
 
-2. Cadastrar contato
-<br />Requisito consite em poder realizar o cadastro de um contato.
-<br />API: http://localhost:9080/itau/cadastro
+2. Exibir informações de um gato
+<br />Requisito consite em poder exibir as informações de um gato através da raça
+<br />API: http://ec2-100-25-31-214.compute-1.amazonaws.com:8080/racas/gato/?raca=Abyssinian
 <br />Método: POST
 <br />Body: 
 ``` json
 {
-    "company_name": "Jonathan",
-    "company_document_number": "12345678999",
-    "phone_number": "193"
-}
-```
-![Dados Cadastro](https://imagens-cadastro-contato.s3-sa-east-1.amazonaws.com/2-Dados+Cadastro.jpeg)
-![Contato Cadastrado](https://imagens-cadastro-contato.s3-sa-east-1.amazonaws.com/3-Cadastro+Sucesso.jpeg)
-![Lista com Contato Cadastrado](https://imagens-cadastro-contato.s3-sa-east-1.amazonaws.com/4-Listando+Novo+Cadastro.jpeg)
+    "weight": {
+        "imperial": "7  -  10",
+        "metric": "3 - 5"
+    },
+    "id": "abys",
+    "name": "Abyssinian",
+    "cfa_url": "http://cfa.org/Breeds/BreedsAB/Abyssinian.aspx",
+    "vetstreet_url": "http://www.vetstreet.com/cats/abyssinian",
+    "vcahospitals_url": "https://vcahospitals.com/know-your-pet/cat-breeds/abyssinian",
+    "temperament": "Active, Energetic, Independent, Intelligent, Gentle",
+    "origin": "Egypt",
+    "country_codes": "EG",
+    "country_code": "EG",
+    "description": "The Abyssinian is easy to care for, and a joy to have in your home. They’re affectionate cats and love both people and other animals.",
+    "life_span": "14 - 15",
+    "indoor": 0,
+    "lap": 1,
+    "alt_names": "",
+    "adaptability": 5,
+    "affection_level": 5,
+    "child_friendly": 3,
+    "dog_friendly": 4,
+    "energy_level": 5,
+    "grooming": 1,
+    "health_issues": 2,
+    "intelligence": 5,
+    "shedding_level": 2,
+    "social_needs": 5,
+    "stranger_friendly": 5,
+    "vocalisation": 1,
+    "experimental": 0,
+    "hairless": 0,
+    "natural": 1,
+    "rare": 0,
+    "rex": 0,
+    "suppressed_tail": 0,
+    "short_legs": 0,
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Abyssinian_(cat)",
+    "hypoallergenic": 0,
+    "reference_image_id": "0XYvRd7oD",
+    "image": {
+        "id": "0XYvRd7oD",
+        "width": 1204,
+        "height": 1445,
+        "url": "https://cdn2.thecatapi.com/images/0XYvRd7oD.jpg"
+    }
+}```
+![Informacoes Gato](https://imagens-cats.s3-sa-east-1.amazonaws.com/2-gato-by-raca.png)
 
 3. Editar contato
 <br />Requisito consite em poder realizar a edição de um contato.
