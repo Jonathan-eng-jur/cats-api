@@ -9,25 +9,53 @@
   2. Acessar a pasta raiz da aplicação via terminal;
   3. Digitar o comando "npm install" para instalar todas as dependências do projeto;
   4. Digitar o comando "npm start" para rodar o projeto localmente;
-  5. Utilizar o navegador de sua preferência e acessar a url através desse ([link](http://localhost:4200));
+  5. Utilizar o navegador de sua preferência e acessar a url através desse ([link](http://localhost:4200)).
   
 ## Informações Backend
 - Tecnologoias utilizadas: Java e Spring Boot
-- Serviços AWS: EC2 ([link](http://ec2-100-25-31-214.compute-1.amazonaws.com:8080))
+- Serviços AWS: EC2 ([link](http://ec2-100-25-31-214.compute-1.amazonaws.com:8080)) (obs: Adicionar end point, ex: /racas)
 - Repositório: github.com/Jonathan-eng-jur/cats-api/tree/main/cats-api
-- Infra: Docker ([link](https://hub.docker.com/r/advogatoblackshark17/cadastro))
+- Infra: Docker ([link](https://hub.docker.com/repository/docker/advogatoblackshark17/catsdeploy-1))
 - Documentação: ([link](https://app.swaggerhub.com/apis-docs/Jonathan-eng-jur/cats-api/1.0.0))
 - Design Patterns: MVC
 - Procedimentos para rodar local:
-  1. TODO
+  1 - Baixar a aplicação via docker, abrir no terminal de sua preferência e usar comando: docker pull advogatoblackshark17/catsdeploy-1;
+  2 - Abrir no terminal de sua preferência e usar comenando: docker images;
+  3 - Pegar o ID da imagem e dar o comando: docker run + ID ou docker logs + ID;
+  4 - Utilizar o navegador de sua preferência e acessar a url através desse ([link](http://localhost:9000/racas)).
+  
+  ![Docker rodando](https://imagens-cats.s3-sa-east-1.amazonaws.com/12-docker-back.png)
+  ![Docker via Postman](https://imagens-cats.s3-sa-east-1.amazonaws.com/13-docker-postman.png)
+  
+  -Alternativamente:
+  1 - Realizar o download ou realizar o clone desta aplicação pelo terminal;
+  2 - Abrir a pasta "cats-api" deste repositório, e alterar o application properties com os seus dados (neste caso estamos usando o MySQL);
+  3 - Iniciar a aplicação no Eclipse ou STS;
+  4 - Utilizar o navegador de sua preferência e acessar a url através desse ([link](http://localhost:8080/racas)).
 
 ## Informações Banco de Dados
 - Tecnologoias utilizadas: My SQL
 - Serviços AWS: RDS
-- Infra: Docker
-- Procedimentos para rodar local:
-  1. TODO
- 
+- Informações inseridas no Application Properties
+  ![Banco de Dados](https://imagens-cats.s3-sa-east-1.amazonaws.com/banco+de+dados.png)
+
+
+## Informações Métricas, Monitoramento e Logs
+- Tecnologoias utilizadas: Apache2
+- Serviços AWS: CloudWatch:
+  * Criação de alarme para monitoramento da EC2;
+  * Criação de evento para monitoramento de deslimento da EC2, consequentimente da aplicação - para saber se o site ficou indisponível;
+  * Logs de Erros da EC2;
+  * Métricas da Laténcia do Banco de Dados RDS;
+  * Métricas de execução CPU(EC2);
+  
+  ![Métricas](https://imagens-cats.s3-sa-east-1.amazonaws.com/11-metricas.png)
+  ![Logs](https://imagens-cats.s3-sa-east-1.amazonaws.com/9-grupo-logs.png)
+  ![Alarme de monitoramento](https://imagens-cats.s3-sa-east-1.amazonaws.com/8-alarme-monitoramento.png)
+  ![monitoramento banco de dados](https://imagens-cats.s3-sa-east-1.amazonaws.com/7-monitoramento-banco.png)
+  ![Evento](https://imagens-cats.s3-sa-east-1.amazonaws.com/10-evento-aviso-email.png)
+
+  
  
 ## Requisitos da aplicação
 1. Listar Raças
