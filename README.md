@@ -19,24 +19,26 @@
 - Documentação: ([link](https://app.swaggerhub.com/apis-docs/Jonathan-eng-jur/cats-api/1.0.0))
 - Design Patterns: MVC
 - Procedimentos para rodar local:
-  1 - Baixar a aplicação via docker, abrir no terminal de sua preferência e usar comando: docker pull advogatoblackshark17/catsdeploy-1;
-  2 - Abrir no terminal de sua preferência e usar comenando: docker images;
-  3 - Pegar o ID da imagem e dar o comando: docker run + ID ou docker logs + ID;
-  4 - Utilizar o navegador de sua preferência e acessar a url através desse ([link](http://localhost:9000/racas)).
+  1. Baixar a aplicação via docker, abrir no terminal de sua preferência e usar comando: docker pull advogatoblackshark17/catsdeploy-1;
+  2. Abrir no terminal de sua preferência e usar comenando: docker images;
+  3. Pegar o ID da imagem e dar o comando: docker run + ID ou docker logs + ID;
+  4. Utilizar o navegador de sua preferência e acessar a url através desse ([link](http://localhost:9000/racas)).
   
   ![Docker rodando](https://imagens-cats.s3-sa-east-1.amazonaws.com/12-docker-back.png)
   ![Docker via Postman](https://imagens-cats.s3-sa-east-1.amazonaws.com/13-docker-postman.png)
   
   -Alternativamente:
-  1 - Realizar o download ou realizar o clone desta aplicação pelo terminal;
-  2 - Abrir a pasta "cats-api" deste repositório, e alterar o application properties com os seus dados (neste caso estamos usando o MySQL);
-  3 - Iniciar a aplicação no Eclipse ou STS;
-  4 - Utilizar o navegador de sua preferência e acessar a url através desse ([link](http://localhost:8080/racas)).
+  1. Realizar o download ou realizar o clone desta aplicação pelo terminal;
+  2. Abrir a pasta "cats-api" deste repositório, e alterar o application properties com os seus dados (neste caso estamos usando o MySQL);
+  3. Iniciar a aplicação no Eclipse ou STS;
+  4. Utilizar o navegador de sua preferência e acessar a url através desse ([link](http://localhost:8080/racas)).
 
 ## Informações Banco de Dados
 - Tecnologoias utilizadas: My SQL
 - Serviços AWS: RDS
 - Informações inseridas no Application Properties
+- Criação das tabelas e armazemaneto das informação consumidas da API (no MySQL)
+
   ![Banco de Dados](https://imagens-cats.s3-sa-east-1.amazonaws.com/banco+de+dados.png)
 
 
