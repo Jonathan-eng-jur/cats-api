@@ -16,6 +16,7 @@
 - Serviços AWS: EC2 ([link](http://ec2-100-25-31-214.compute-1.amazonaws.com:8080))
 - Repositório: github.com/Jonathan-eng-jur/cats-api/tree/main/cats-api
 - Infra: Docker ([link](https://hub.docker.com/r/advogatoblackshark17/cadastro))
+- Documentação: ([link](https://app.swaggerhub.com/apis-docs/Jonathan-eng-jur/cats-api/1.0.0))
 - Procedimentos para rodar local:
   1. TBD
 
@@ -28,22 +29,31 @@
  
  
 ## Requisitos da aplicação
-1. Listar Contatos
-<br />Requisito consite em poder listar e exibir os contatos ja salvos no banco de dados na tela para o usuário.
-<br />API: http://localhost:9080/itau/cadastro/all
+1. Listar Raças
+<br />Requisito consite em poder listar e todas as raças em um input de seleção
+<br />API: http://ec2-100-25-31-214.compute-1.amazonaws.com:8080/racas
 <br />Método: GET
 <br />Retorno: 
 ``` json
 [
-    {
-        "nome_cadastro": "Jonathan Cavalcanti de Paula",
-        "cpf_cadastro": "44281998802",
-        "telefone_cadastro": "11992376816",
-        "active": false
-    }
+    "Abyssinian",
+    "Aegean",
+    "American Bobtail",
+    "American Curl",
+    "Khao Manee",
+    "Korat",
+    "Kurilian",
+    "LaPerm",    
+    "Somali",
+    "Sphynx",
+    "Tonkinese",
+    "Toyger",
+    "Turkish Angora",
+    "Turkish Van",
+    "York Chocolate"
 ]
 ```
-![Lista de contatos](https://imagens-cadastro-contato.s3-sa-east-1.amazonaws.com/1-Listagem+de+contatos.jpeg)
+![Lista de racas](https://imagens-cats.s3-sa-east-1.amazonaws.com/1-lista-raca.png)
 
 2. Cadastrar contato
 <br />Requisito consite em poder realizar o cadastro de um contato.
