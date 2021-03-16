@@ -46,9 +46,9 @@
 - Tecnologoias utilizadas: Apache2
 - Serviços AWS: CloudWatch:
   * Criação de alarme para monitoramento da EC2;
-  * Criação de evento para monitoramento de deslimento da EC2, consequentimente da aplicação - para saber se o site ficou indisponível;
+  * Criação de evento para monitoramento de desligamento da EC2, consequentimente da aplicação - para saber se o site ficou indisponível;
   * Logs de Erros da EC2;
-  * Métricas da Laténcia do Banco de Dados RDS;
+  * Métricas da Latência do Banco de Dados RDS;
   * Métricas de execução CPU(EC2);
   
   ![Métricas](https://imagens-cats.s3-sa-east-1.amazonaws.com/11-metricas.png)
